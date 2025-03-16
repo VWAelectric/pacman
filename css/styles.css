@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(20, 42px);
+    grid-template-rows: repeat(20, 42px);
+    gap: 0;
+    margin: auto;
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+
+.cell {
+    width: 42px;
+    height: 42px;
+}
+
+.wall {
+    background-color: blue;
+}
+
+.path {
+    background-color: black;
+}
+
+#pacman {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/pacman.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.fruit {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/fruta.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    margin: -15px;
+}
+
+.ghost {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+}
+
+.ghost::before,
+.ghost::after {
+    content: "";
+    width: 10px;
+    height: 12px;
+    background-color: white;
+    /* Olhos brancos */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+
+.ghost::before {
+    left: 8px;
+    /* Olho esquerdo */
+}
+
+.ghost::after {
+    right: 8px;
+    /* Olho direito */
+}
+
+.ghost .pupil {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    /* Pupilas pretas */
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+p {
+    margin: 20px;
+}
+
+h1, #recorde {
+    margin: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
